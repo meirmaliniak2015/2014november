@@ -3,7 +3,36 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        drawRectangle(7,3,30,8);
+
+        //primitive types
+        byte b; //1-bytes   -127  to +128
+        short s; // 2-bytes  -32000   +32000
+        int x; //4-bytes
+        long l; //8-bytes
+
+        float f; //4-bytes
+        double d; //8-bytes;
+
+        boolean bool; //1-bit;
+
+        char c; //1-byte
+
+        c = '@';
+        s = 10000;
+
+
+
+        Circle myCircle;
+
+        myCircle = new Circle();
+        //a. go find a free spot in the heap.
+        //b. mark the spot as taken.
+        //c. initialize the object.
+        //d. return the object's address in the heap.
+
+
+        myCircle = new Circle();
+
 
     }
 
@@ -20,3 +49,9 @@ public class Main {
         }
     }
 }
+/*
+* Abstraction
+* Encapsulation
+* Inheritance
+* Polymorphism
+*/
