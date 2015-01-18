@@ -20,7 +20,7 @@ public class Main {
         c = '@';
         s = 10000;
 
-
+        Dog dog;
 
         Circle myCircle;
 
@@ -32,6 +32,16 @@ public class Main {
 
 
         myCircle = new Circle();
+
+        Circle mySecondCircle = new Circle();
+
+        dog = new Dog();
+        dog.gender = true;
+        dog.isAlive = false;
+        dog.breed = 100;
+        dog.color = 0xff000000;
+        dog.bark();
+
 
 
     }
