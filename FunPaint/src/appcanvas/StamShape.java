@@ -8,5 +8,6 @@ import graphicshape.Shape;
 public class StamShape extends Shape {
     public void stam(){
         System.out.println("color: " + color);
+        color = 19;
     }
 }

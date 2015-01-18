@@ -7,7 +7,7 @@ import graphicshape.Circles;
 public class Main {
 
     public static void main(String[] args) {
-
+        "Happy birthday to you!"
 
         Circle myCircle;
 
@@ -31,7 +31,11 @@ public class Main {
 
 
         myCircle = new Circle();
-
+        byte r = 12;
+        byte g = 14;
+        byte b = 18;
+        myCircle.fillColor(r, g, b);
+        myCircle.fillColor(12.3f, 10f, 15f);
 
 
         Circle mySecondCircle = new Circle();

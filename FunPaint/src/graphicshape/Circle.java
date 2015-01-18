@@ -48,4 +48,15 @@ public class Circle extends Shape {
         return radius*radius*3.14;
     }
 
+
+    // signature : fillColor byte byte byte
+    public void fillColor(byte red, byte green, byte blue){
+        System.out.println("fillColor using rgb");
+
+    }
+
+    public void fillColor(float saturation, float hue, float brightness){
+        System.out.println("fillColor using saturation");
+    }
+
 }
