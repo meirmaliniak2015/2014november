@@ -1,4 +1,8 @@
-package com.company;
+package appcanvas;
+
+
+import graphicshape.Circle;
+import graphicshape.Circles;
 
 public class Main {
 
@@ -13,9 +17,22 @@ public class Main {
         //c. initialize the object.
         //d. return the object's address in the heap.
         myCircle.setRadius(18);
-        System.out.println(myCircle.getRadius());
+        //System.out.println(myCircle.getRadius());
+
+        int x = 8;
+        int y = x;
+
+        //Access modifiers: (of fields or methods)
+        // Public              - can be accessed from anywhere
+        // Private             - can be accessed from only within the class
+        // Protected & Default - can be accessed from only within the package
+
+
+
 
         myCircle = new Circle();
+
+
 
         Circle mySecondCircle = new Circle();
 
