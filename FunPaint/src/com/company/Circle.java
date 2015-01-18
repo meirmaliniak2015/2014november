@@ -4,12 +4,9 @@ package com.company;
  * Created by eladlavi on 1/14/15.
  */
 public class Circle {
-    private int radius;
-    private int xPos;
+    private int radius, xPos, yPos;
 
 
-
-    private int yPos;
     public Circle(){
         radius = 10;
         xPos = 20;
