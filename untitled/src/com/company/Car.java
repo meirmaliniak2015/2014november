@@ -49,4 +49,18 @@ public class Car {
     public void setManualGear(boolean manualGear) {
         this.manualGear = manualGear;
     }
+
+    @Override
+    public String toString() {
+        return "car: model:" + getModel() + " make: " + getMake() + " gear: "
+                + (isManualGear() ? "manual" : "automatic");
+    }
 }
+
+
+
+
+
+
+
+
