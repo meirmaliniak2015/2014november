@@ -15,8 +15,10 @@ class Main {
         a1.setName("Snoopy");
         a1.move();
         a2.move();
-        Dog d1 = (Dog)a1;
-        d1.bark();
+        if(a1 instanceof  Dog) {
+            Dog d1 = (Dog) a1;
+            d1.bark();
+        }
 
         Cat c1 = (Cat)a2;
         c1.miaoo();
