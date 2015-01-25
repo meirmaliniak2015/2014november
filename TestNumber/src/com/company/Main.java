@@ -12,8 +12,17 @@ class Main {
         Animal a3 = new Animal();
         Animal a4 = new Poodle();
 
+        a1.setName("Snoopy");
+        a1.move();
+        a2.move();
+        Dog d1 = (Dog)a1;
+        d1.bark();
 
+        Cat c1 = (Cat)a2;
+        c1.miaoo();
         //Dog d = new Animal();
+        Dog d2 = new Dog();
+        Animal a5 = d2;
 
 
     }
@@ -23,18 +32,36 @@ class Main {
 }
 
 class Animal{
+    private String name;
+
     public void move(){
         System.out.println("moving..");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
 
 class Dog extends Animal{
     public void bark(){
-        System.out.println("waf waf..");
+        System.out.println("waf waf.. my name is " + getName());
+    }
+
+    @Override
+    public void move() {
+        System.out.println("dog is moving...");
     }
 }
 
 class Cat extends Animal{
+    public void miaoo(){
+        System.out.println("miaooo.. my name is " + getName());
+    }
 
 }
 class Poodle extends Dog{
