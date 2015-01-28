@@ -10,17 +10,23 @@ public class Main {
         stam(myInt);
         System.out.println(myInt.num);
         */
-        printArray(stam3());
+
+        int[] myArray = {6, 5, 13, 16};
+        bubbleDance(myArray);
+        printArray(myArray);
 
 
     }
 
 
     public static void printArray(int[] arr){
-        for (int i = 0; i < arr.length; i++) {
+        if(arr==null || arr.length==0)
+            System.out.println("empty array");
+        for (int i = 0; i < arr.length - 1; i++) {
             System.out.print(arr[i]+",");
         }
-        System.out.println("end");
+        System.out.println(arr[arr.length-1]);
+
     }
     public static double average(int[] numbers){
         int sum = 0;
@@ -94,7 +100,45 @@ public class Main {
     }
 
     public static int[] filterArray(int[] numbers, int lowerBound, int upperBound){
+        if(numbers==null || lowerBound>upperBound)
+            return null;
+        int counter = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]>=lowerBound && numbers[i]<upperBound)
+                counter++;
+        }
+        int[] result = new int[counter];
+        int pos = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]>=lowerBound && numbers[i]<upperBound)
+                result[pos++] = numbers[i];
+        }
+        return result;
+    }
+
+    public static int search(int[] numbers, int num){
+        //return the first position/index of num within numbers.
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]==num)
+                return i;
+        }
+        return -1;
+    }
+
+    public static void bubbleDance(int[] numbers){
+        for (int i = 0; i < numbers.length - 1; i+=2) {
+            int temp = numbers[i];
+            numbers[i] = numbers[i+1];
+            numbers[i+1] = temp;
+        }
+    }
+
+    public static void sort(int[] numbers){
 
     }
+
+
+
+
 
 }
