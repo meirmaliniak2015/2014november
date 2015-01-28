@@ -28,6 +28,7 @@ public class Circle extends Shape {
 
 
 
+
     @Override
     public String toString() {
         return "center = (" + xPos + "," + yPos + ") and radius = "
@@ -62,7 +63,7 @@ public class Circle extends Shape {
     }
 
     public double area(){
-        return radius*radius*3.14;
+        return radius * radius * Math.PI;
     }
 
 
@@ -75,5 +76,7 @@ public class Circle extends Shape {
     public void fillColor(float saturation, float hue, float brightness){
         System.out.println("fillColor using saturation");
     }
+
+
 
 }

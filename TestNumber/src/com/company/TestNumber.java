@@ -6,5 +6,10 @@ package com.company;
 public class TestNumber {
 
 
-    //public static double sum()
+    public static double sum(Number[] nums){
+        double sum = 0.0;
+        for(Number num : nums)
+            sum += num.doubleValue();
+        return sum;
+    }
 }

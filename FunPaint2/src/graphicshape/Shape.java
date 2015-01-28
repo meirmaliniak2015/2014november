@@ -5,4 +5,7 @@ package graphicshape;
  */
 public class Shape {
     protected int color;
+    public double area(){
+        return 0;
+    }
 }

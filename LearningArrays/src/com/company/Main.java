@@ -12,8 +12,21 @@ public class Main {
         */
 
         int[] myArray = {6, 5, 13, 16};
+        /*
+
         bubbleDance(myArray);
         printArray(myArray);
+        */
+        for (int i = 0; i < myArray.length; i++) {
+            int x = myArray[i];
+            System.out.println(x);
+        }
+        //foreach
+        for(int x : myArray){
+            System.out.println(x);
+        }
+
+
 
 
     }
