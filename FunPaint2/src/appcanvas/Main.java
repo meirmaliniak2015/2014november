@@ -7,8 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Point3D myPoint = new Point3D(3, 7, 19);
-        System.out.println(myPoint);
+        Point p1 = new Point(3, 4);
+        Point p2 = new Point(3, 4);
+        System.out.println(p1.equals(p2));
 
     }
 

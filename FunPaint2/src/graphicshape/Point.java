@@ -35,4 +35,18 @@ public class Point {
     String components(){
         return xPos+","+yPos;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj==null)
+            return false;
+        if(this==obj)
+            return true;
+        if(obj instanceof Point){
+            Point other = (Point)obj;
+            return this.getxPos()==other.getxPos() &&
+                    this.getyPos()==other.getyPos();
+        }
+        return false;
+    }
 }
