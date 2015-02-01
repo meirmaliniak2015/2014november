@@ -1,8 +1,9 @@
 package com.company;
 
 public class Main {
-
+    static int counter = 0;
     public static void main(String[] args) {
+
         /*
         //int num = 8;
         MyInt myInt = new MyInt();
@@ -11,21 +12,39 @@ public class Main {
         System.out.println(myInt.num);
         */
 
-        int[] myArray = {6, 5, 13, 16};
+        int[] myArray = new int[20000];
+        int from = -100;
+        int to = 100;
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = (int)(Math.random()*(to - from))+from;
+        }
+
+        counter = 0;
+        //System.currentTimeMillis();
+        long start = System.nanoTime();
+        sort(myArray);
+        long end = System.nanoTime();
+        //printArray(myArray);
+
+        System.out.println("counter: " + counter);
+        long timeElapsed = (end - start)/1000000;
+        System.out.println("time elapsed: " + timeElapsed);
         /*
 
         bubbleDance(myArray);
         printArray(myArray);
         */
+        /*
         for (int i = 0; i < myArray.length; i++) {
             int x = myArray[i];
             System.out.println(x);
         }
         //foreach
+
         for(int x : myArray){
             System.out.println(x);
         }
-
+        */
 
 
 
@@ -147,6 +166,22 @@ public class Main {
     }
 
     public static void sort(int[] numbers){
+        int j = numbers.length;
+        boolean isSorted = false;
+        while(!isSorted && j>0) {
+            j--;
+            isSorted = true;
+            for (int i = 0; i < j; i++) {
+                if (numbers[i] > numbers[i + 1]) {
+                    int temp = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = temp;
+                    isSorted = false;
+                }
+                int x=8;
+                counter++;
+            }
+        }
 
     }
 
