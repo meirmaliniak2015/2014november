@@ -10,7 +10,7 @@ import graphicshape.Shape;
 public class Canvas {
     private boolean[][] canvas;
     public Canvas(int width, int height){
-        canvas = new boolean[width][height];
+        canvas = new boolean[height][width];
     }
 
     public void drawPoint(Point p){
@@ -21,9 +21,17 @@ public class Canvas {
 
     public void drawCanvas(){
         for (int i = 0; i < canvas.length; i++) {
-            System.out.println();
             for (int j = 0; j < canvas[i].length; j++) {
                 System.out.print(canvas[i][j] ? "*" : " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void clearCanvas(){
+        for (int i = 0; i < canvas.length; i++) {
+            for (int j = 0; j < canvas[i].length; j++) {
+                canvas[i][j] = false;
             }
         }
     }

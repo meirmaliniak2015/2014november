@@ -6,14 +6,11 @@ import graphicshape.*;
 public class Main {
 
     public static void main(String[] args) {
+        Canvas myCanvas = new Canvas(30, 4);
+        Point p1 = new Point(1,1);
+        myCanvas.drawPoint(p1);
 
-        boolean[][] x = new boolean[10][5];
-        for(int i=0;i<x.length;i++){
-            for (int j = 0; j < x[i].length; j++) {
-                x[i][j] = true;
-            }
-        }
-
+        myCanvas.drawCanvas();
 
         /*
         drawRectangle(3,4,20,7);
