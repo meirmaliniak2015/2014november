@@ -7,10 +7,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Point p1 = new Point(3, 4);
-        Point p2 = new Point(3, 4);
-        System.out.println(p1.equals(p2));
+        boolean[][] x = new boolean[10][5];
+        for(int i=0;i<x.length;i++){
+            for (int j = 0; j < x[i].length; j++) {
+                x[i][j] = true;
+            }
+        }
 
+
+        /*
+        drawRectangle(3,4,20,7);
+        drawRectangle(5,6,20,7);
+        */
     }
 
     public static void drawRectangle(int x, int y, int width, int height){

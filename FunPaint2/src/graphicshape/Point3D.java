@@ -24,4 +24,15 @@ public class Point3D extends Point {
     String components() {
         return super.components() + "," + zPos;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(super.equals(obj)){
+            if(obj instanceof Point3D){
+                Point3D other = (Point3D)obj;
+                return this.getzPos()==other.getzPos();
+            }
+        }
+        return false;
+    }
 }
